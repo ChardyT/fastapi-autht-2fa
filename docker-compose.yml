@@ -1,12 +1,38 @@
-version: '3.8'
+version: '3.9'
 services: 
   api:
-    build: .
+    build:
+      context: ./api
+      dockerfile: Dockerfile
     container_name: fast-api
     ports: 
       - 5000:15400
+    # environment:
+    #   NODE_ENV: production
+    #   DB_HOST: db
+    #   DB_PORT: 5432
+    #   DB_USER: postgres
+    #   DB_PASSWORD: postgres
+    #   DB_NAME: postgres
+    depends_on:
+      - db
     volumes: 
       - ./api:/api
       - ./upload-images/:/upload-images/user/
     env_file: 
       - ./api/.env
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes: 
+      - db:/var/lib/postgresql/data
+      # copy the sql script to create tables
+      # - ./db/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+volumes:
+  db:
+    driver: local
