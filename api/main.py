@@ -1,12 +1,12 @@
 import time
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from api.utils.dbUtil import database
-from api.auth import router as auth_router
-from api.otps import router as otp_router
-from api.users import router as user_router
-from api.books import router as book_router
-from api.exceptions.business import BusinessException
+from utils.dbUtil import database
+from auth import router as auth_router
+from otps import router as otp_router
+from users import router as user_router
+from books import router as book_router
+from exceptions.business import BusinessException
 
 app = FastAPI(
     docs_url="/docs",

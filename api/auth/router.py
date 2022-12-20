@@ -1,10 +1,10 @@
 import uuid
 from fastapi import APIRouter, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
-from api.auth import schemas
-from api.auth import crud
-from api.utils import cryptoUtil, constantUtil, emailUtil, jwtUtil
-from api.exceptions.business import BusinessException
+from auth import schemas
+from auth import crud
+from utils import cryptoUtil, constantUtil, emailUtil, jwtUtil
+from exceptions.business import BusinessException
 
 router = APIRouter(
     prefix='/api/v1'

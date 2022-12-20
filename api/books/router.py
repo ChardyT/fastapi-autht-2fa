@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
-from api.auth import schemas as auth_schema
-from api.books import schemas as book_schema
-from api.utils import jwtUtil
-from api.books import crud
+from auth import schemas as auth_schema
+from books import schemas as book_schema
+from utils import jwtUtil
+from books import crud
 
 router = APIRouter(
     prefix='/api/v1'

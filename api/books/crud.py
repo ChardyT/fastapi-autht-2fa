@@ -1,7 +1,7 @@
-from api.utils.dbUtil import database
-from api.models import bookings
-from api.auth import schemas as auth_schema
-from api.books import schemas as book_schema
+from utils.dbUtil import database
+from models import bookings
+from auth import schemas as auth_schema
+from books import schemas as book_schema
 
 
 def check_available_booking_room(request: book_schema.CreateBooking):

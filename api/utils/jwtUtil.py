@@ -4,9 +4,9 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jwt import PyJWTError
 from pydantic import ValidationError
-from api.utils import constantUtil
-from api.auth import schemas
-from api.auth import crud
+from utils import constantUtil
+from auth import schemas
+from auth import crud
 
 oauth2_scheme = OAuth2PasswordBearer(
     tokenUrl="/api/v1/auth/login"

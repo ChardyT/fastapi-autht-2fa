@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, File, UploadFile
-from api.users import schemas as user_schema
-from api.auth import schemas as auth_schema
-from api.utils import cryptoUtil, jwtUtil
-from api.users import crud as user_crud
-from api.auth import crud as auth_crud
+from users import schemas as user_schema
+from auth import schemas as auth_schema
+from utils import cryptoUtil, jwtUtil
+from users import crud as user_crud
+from auth import crud as auth_crud
 import os
 from PIL import Image
 

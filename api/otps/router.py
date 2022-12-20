@@ -1,9 +1,9 @@
 import uuid
 from fastapi import APIRouter, HTTPException
-from api.otps import schemas
-from api.utils import otpUtil, emailUtil
-from api.enums import otp
-from api.otps import crud
+from otps import schemas
+from utils import otpUtil, emailUtil
+from enums import otp
+from otps import crud
 
 router = APIRouter(
     prefix='/api/v1'

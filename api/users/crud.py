@@ -1,8 +1,8 @@
-from api.utils.dbUtil import database
-from api.utils import cryptoUtil
-from api.users import schemas as user_schema
-from api.auth import schemas as auth_schema
-from api.models import blacklists
+from utils.dbUtil import database
+from utils import cryptoUtil
+from users import schemas as user_schema
+from auth import schemas as auth_schema
+from models import blacklists
 
 
 def update_user(

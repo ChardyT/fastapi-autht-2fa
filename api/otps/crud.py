@@ -1,5 +1,5 @@
-from api.utils.dbUtil import database
-from api.otps import schemas
+from utils.dbUtil import database
+from otps import schemas
 
 
 def find_otp_block(recipient_id: str):

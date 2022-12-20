@@ -3,7 +3,7 @@ from starlette.config import Config
 from typing import List
 
 
-config = Config('.env')
+config = Config('api/.env')
 conf = ConnectionConfig(
     MAIL_USERNAME=config("MAIL_USERNAME"),
     MAIL_PASSWORD=config("MAIL_PASSWORD"),

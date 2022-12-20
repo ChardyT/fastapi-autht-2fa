@@ -1,5 +1,5 @@
-from api.utils.dbUtil import database
-from api.auth import schemas
+from utils.dbUtil import database
+from auth import schemas
 
 
 def save_user(user: schemas.UserCreate):
